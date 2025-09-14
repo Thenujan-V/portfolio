@@ -26,15 +26,45 @@ const dot = document.createElement('div');
   });
 
 
+// Collapsible sections for skills
+//For Skills section
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    console.log(content);
+   if (content.style.maxHeight){
+      content.style.maxHeight = null;
+
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
 
 
 // Filter functionality
 
-filterSelection("all")
-function filterSelection(c) {
+articlesFilterSelection("all")
+function articlesFilterSelection(c) {
   console.log("Filter function called with category:", c);
   var x, i;
   x = document.getElementsByClassName("content");
+  if (c == "all") c = "";
+  // Add the "show" class 
+  for (i = 0; i < x.length; i++) {
+    filterRemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) filterAddClass(x[i], "show");
+  }
+}
+
+projectsFilterSelection("all")
+function projectsFilterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("project");
   if (c == "all") c = "";
   // Add the "show" class 
   for (i = 0; i < x.length; i++) {
@@ -68,7 +98,22 @@ function filterRemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
-// Add active class to the current control button (highlight it)
+// Add active class to the current control button for projects (highlight it)
+
+var projectsFilterBtnContainer = document.getElementById("projectsFilterBtnContainer");
+var projectFilterBtns = projectsFilterBtnContainer.getElementsByClassName("filterBtn");
+for (var i = 0; i < projectFilterBtns.length; i++) {
+  projectFilterBtns[i].addEventListener("click", function() {
+    // Remove active from all buttons
+    for (let j = 0; j < projectFilterBtns.length; j++) {
+      projectFilterBtns[j].classList.remove("active");
+    }
+    // Add active to the clicked one
+    this.classList.add("active");
+  });
+}
+
+// Add active class to the current control button for articles (highlight it)
 var btnContainer = document.getElementById("filterBtnContainer");
 var btns = btnContainer.getElementsByClassName("filterBtn");
 for (var i = 0; i < btns.length; i++) {
@@ -81,3 +126,4 @@ for (var i = 0; i < btns.length; i++) {
     this.classList.add("active");
   });
 }
+

@@ -997,7 +997,9 @@ background-image: linear-gradient(to bottom, rgba(15, 7, 22, .9), transparent 80
   /* margin-top: 1rem; */
   min-height: 70vh;
 }
-
+.skills-section .skills .skills-content .collapsible span {
+  display: none;
+}
 .skills-section .skills .skills-content .contents span {
   font-size: 14px;
   margin-bottom: 3px;
@@ -1175,11 +1177,15 @@ background-image: linear-gradient(to bottom, rgba(15, 7, 22, .9), transparent 80
   text-align: left;
 }
 
+#projectsFilterBtnContainer button img{
+  display: none;
+}
 .projects-section .projects .projects-content .content{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
+  margin-top: 4rem
 }
 
 .projects-section .projects .projects-content .content .project {
@@ -1193,8 +1199,12 @@ background-image: linear-gradient(to bottom, rgba(15, 7, 22, .9), transparent 80
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   box-shadow: 3px 3px 4px #623ca863;
-
+  display: none;
 }
+.projects-section .projects .projects-content .content .show {
+  display: block;
+}
+
 .projects-section .projects .projects-content .content .project .img {
   position: relative;
   width: 100%;
@@ -1368,6 +1378,9 @@ background-image: linear-gradient(to bottom, rgba(15, 7, 22, .9), transparent 80
   .about .about-content .content p {
     font-size: 12px;
   }
+  .projects-section .projects .projects-content .content .project {
+    flex: 0 1 calc(50% - 16px);
+  }
 }
 
 @media (max-width: 954px) {
@@ -1409,6 +1422,9 @@ background-image: linear-gradient(to bottom, rgba(15, 7, 22, .9), transparent 80
   }
   .skills-section .skills p {
     text-align: justify;
+  }
+  .projects-section .projects .projects-content .content .project .overlay img{
+    width: 100px;
   }
 }
 
@@ -1535,6 +1551,7 @@ background-image: linear-gradient(to bottom, rgba(15, 7, 22, .9), transparent 80
   .resume-section .resume .resume-content .content-item .experience .location {
     display: none;
   }
+  
 }
 @media (max-width: 678px) {
   .about-section {
@@ -1601,6 +1618,9 @@ background-image: linear-gradient(to bottom, rgba(15, 7, 22, .9), transparent 80
     border: none;
     padding: .5rem 1rem;
   }
+  .projects-section .projects .projects-content .content .project .overlay img{
+    width: 80px;
+  }
 }
 
 @media (max-width: 605px) {
@@ -1615,6 +1635,11 @@ background-image: linear-gradient(to bottom, rgba(15, 7, 22, .9), transparent 80
   }
   .resume-section .resume .resume-content .content-item .experience .details .description {
     text-align: justify;
+  }
+}
+@media (max-width: 554px) {
+  .projects-section .projects .projects-content .content .project {
+    flex: 0 1 calc(100% - 16px);
   }
 }
 
@@ -1720,7 +1745,52 @@ background-image: linear-gradient(to bottom, rgba(15, 7, 22, .9), transparent 80
   .skills-section .skills .skills-content .technologies .skill {
     padding: .4rem .4rem;
   }
-
+  .skills-section .skills .skills-content .core-cencepts .contents {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+  }
+  .skills-section .skills .skills-content .soft-skills .contents {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+  }
+  .skills-section .skills .skills-content .collapsible {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .skills-section .skills .skills-content .collapsible:not(.active) h2,
+  .skills-section .skills .skills-content .collapsible:not(.active) span {
+    margin-bottom: 0;
+  }
+  .skills-section .skills .skills-content .collapsible span {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .skills-section .skills .skills-content .collapsible span {
+    /* color: red !important; */
+  }
+  .skills-section .skills .skills-content .collapsible:not(.active) span .down-icon {
+    display: none;
+  }
+  .skills-section .skills .skills-content .collapsible.active span .right-icon {
+    display: none;
+  }
+  .skills-section .skills .skills-content .core-cencepts:hover {
+    cursor: pointer;
+    border-color: var(--main-gradient-first);
+  }
+  .skills-section .skills .skills-content .core-cencepts:hover .collapsible h2{
+    filter: brightness(1.5);
+  }
+  .skills-section .skills .skills-content .soft-skills:hover {
+    cursor: pointer;
+    border-color: var(--main-gradient-first);
+  }
+  .skills-section .skills .skills-content .soft-skills:hover .collapsible h2{
+    filter: brightness(1.5);
+  }
 }
 
 
@@ -1784,6 +1854,9 @@ background-image: linear-gradient(to bottom, rgba(15, 7, 22, .9), transparent 80
   .skills-section .skills .skills-content .core-cencepts .contents .cencept .skill span {
     min-width: 200px;
   }
+  .projects-section .projects .projects-content .content .project .details .tech img {
+    width: 20px;
+  }
 }
 
 @media (max-width: 406px) {
@@ -1837,6 +1910,9 @@ background-image: linear-gradient(to bottom, rgba(15, 7, 22, .9), transparent 80
   }
   .about-section {
     min-height: 165vh;
+  }
+  .projects-section .projects .projects-content .content .project .details .tech img {
+    width: 18px;
   }
 }
 
