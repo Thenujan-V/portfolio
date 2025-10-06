@@ -1,29 +1,41 @@
+
 const dot = document.createElement('div');
-  dot.classList.add('cursor-dot');
+dot.classList.add('cursor-dot');
 
-  const border = document.createElement('div');
-  border.classList.add('cursor-border');
+const border = document.createElement('div');
+border.classList.add('cursor-border');
 
-  document.body.appendChild(dot);
-  document.body.appendChild(border);
+document.body.appendChild(dot);
+document.body.appendChild(border);
 
-  document.addEventListener('mousemove', (e) => {
-    dot.style.left = e.clientX + 'px';
-    dot.style.top = e.clientY + 'px';
+document.addEventListener('mousemove', (e) => {
+  dot.style.left = e.clientX + 'px';
+  dot.style.top = e.clientY + 'px';
 
-    border.style.left = e.clientX + 'px';
-    border.style.top = e.clientY + 'px';
+  border.style.left = e.clientX + 'px';
+  border.style.top = e.clientY + 'px';
+});
+
+document.addEventListener('mouseleave', () => {
+  dot.style.opacity = '0';
+  border.style.opacity = '0';
+});
+
+document.addEventListener('mouseenter', () => {
+  dot.style.opacity = '1';
+  border.style.opacity = '1';
+});
+
+//For Navigation bar active link highlighting
+document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.querySelector("nav");
+  nav.addEventListener("click", (e) => {
+    const link = e.target.closest("a");
+    if (!link) return;
+    nav.querySelectorAll("a").forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
   });
-
-  document.addEventListener('mouseleave', () => {
-    dot.style.opacity = '0';
-    border.style.opacity = '0';
-  });
-
-  document.addEventListener('mouseenter', () => {
-    dot.style.opacity = '1';
-    border.style.opacity = '1';
-  });
+});
 
 
 // Collapsible sections for skills
@@ -32,11 +44,11 @@ var coll = document.getElementsByClassName("collapsible");
 var i;
 
 for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
+  coll[i].addEventListener("click", function () {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
     console.log(content);
-   if (content.style.maxHeight){
+    if (content.style.maxHeight) {
       content.style.maxHeight = null;
 
     } else {
@@ -50,7 +62,6 @@ for (i = 0; i < coll.length; i++) {
 
 articlesFilterSelection("all")
 function articlesFilterSelection(c) {
-  console.log("Filter function called with category:", c);
   var x, i;
   x = document.getElementsByClassName("content");
   if (c == "all") c = "";
@@ -103,7 +114,7 @@ function filterRemoveClass(element, name) {
 var projectsFilterBtnContainer = document.getElementById("projectsFilterBtnContainer");
 var projectFilterBtns = projectsFilterBtnContainer.getElementsByClassName("filterBtn");
 for (var i = 0; i < projectFilterBtns.length; i++) {
-  projectFilterBtns[i].addEventListener("click", function() {
+  projectFilterBtns[i].addEventListener("click", function () {
     // Remove active from all buttons
     for (let j = 0; j < projectFilterBtns.length; j++) {
       projectFilterBtns[j].classList.remove("active");
@@ -117,7 +128,7 @@ for (var i = 0; i < projectFilterBtns.length; i++) {
 var btnContainer = document.getElementById("filterBtnContainer");
 var btns = btnContainer.getElementsByClassName("filterBtn");
 for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
+  btns[i].addEventListener("click", function () {
     // Remove active from all buttons
     for (let j = 0; j < btns.length; j++) {
       btns[j].classList.remove("active");
@@ -126,4 +137,13 @@ for (var i = 0; i < btns.length; i++) {
     this.classList.add("active");
   });
 }
+
+//Get current year for footer
+document.addEventListener('DOMContentLoaded', function () {
+  const yearSpan = document.getElementById('currentYear');
+  if (yearSpan) {
+    const currentYear = new Date().getFullYear();
+    yearSpan.textContent = currentYear;
+  }
+});
 

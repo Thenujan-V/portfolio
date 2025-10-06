@@ -8,10 +8,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="./articleSection.css">
+  <link rel="stylesheet" href="./contactSection.css">
+  <link rel="stylesheet" href="./footer.css">
+  <link rel="stylesheet" href="./animation.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 
 <body>
-  <header>
+  <header data-aos="fade-down" data-aos-delay="300">
     <a href="#" class="logo">Thenuz.</a>
     <input type="checkbox" id="menu-toggle" hidden />
     <label for="menu-toggle" class="menu-icon">
@@ -20,10 +25,12 @@
 
     <nav class="nav-links">
       <a href="#" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#">Resume</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
+      <a href="#about-section">About</a>
+      <a href="#resume-section">Resume</a>
+      <a href="#skills-section">Skills</a>
+      <a href="#projects-section">Projects</a>
+      <a href="#articles-section">Articles</a>
+      <a href="#contact-section">Contact</a>
     </nav>
   </header>
 
@@ -31,37 +38,37 @@
   <section class="home-section">
     <div class="home active">
       <div class="home-details">
-        <h2 class="name">I am Thenujan</h2>
-        <h1>
+        <h2 class="name" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">I am Thenujan</h2>
+        <h1 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
           <span class="span1">Full-stack</span><span class="span2"> Developer</span>
         </h1>
-        <p>
+        <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
           I design and develop digital experiences that combine creativity,
           performance, and usability. With a strong focus on clean design and
           smooth interactions, I bring ideas to life through thoughtful
           development, creating solutions that not only work — they leave an
           impression.
         </p>
-        <div class="btn-sci">
-          <a href="#" class="btn">Resume</a>
+        <div class="btn-sci" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+          <a href="#" class="btn" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">Resume</a>
           <div class="sci">
-            <a href="#">
+            <a href="#" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
               <i class="fa-brands fa-linkedin"></i>
             </a>
-            <a href="#">
+            <a href="#" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
               <i class="fa-brands fa-github"></i>
             </a>
-            <a href="#">
+            <a href="#" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
               <i class="fa-brands fa-hackerrank"></i>
             </a>
-            <a href="#">
+            <a href="#" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
               <i class="fa-brands fa-whatsapp"></i>
             </a>
           </div>
         </div>
       </div>
 
-      <div class="home-img">
+      <div class="home-img" data-aos="zoom-out-up" data-aos-delay="200" data-aos-duration="1500">
         <div class="img-box">
           <div class="img-item">
             <img src="images/myimg.png" alt="myimg" />
@@ -70,26 +77,26 @@
       </div>
     </div>
     <div class="home-end">
-      <div class="details">
+      <div class="details" data-aos="zoom-out-right" data-aos-delay="200" data-aos-duration="1000">
         <div>2+</div>
         <p>Year <br> Experience</p>
       </div>
-      <div class="details">
+      <div class="details" data-aos="zoom-out-right" data-aos-delay="200" data-aos-duration="1000">
         <div>15+</div>
         <p>Projects <br> Completed</p>
       </div>
-      <div class="details">
+      <div class="details" data-aos="zoom-out-left" data-aos-delay="200" data-aos-duration="1000">
         <div>5+</div>
         <p>Clients <br> Served</p>
       </div>
-      <div class="details">
+      <div class="details" data-aos="zoom-out-left" data-aos-delay="200" data-aos-duration="1000">
         <div>6</div>
         <p>Professional <br> Certifications</p>
       </div>
     </div>
   </section>
 
-  <section class="about-section">
+  <section class="about-section" id="about-section">
     <!-- <div class="back-stars"></div> -->
     <div class="bg-animation">
       <div id="stars"></div>
@@ -100,7 +107,7 @@
     <div class="about" id="about">
       <h1>About Me</h1>
       <div class="about-content">
-        <div class="content content-first">
+        <div class="content content-first animation-fade-in">
           <h2>I'm Thenujan velthasan...</h2>
           <p>
             A driven and forward-thinking final-year undergraduate at the
@@ -118,10 +125,10 @@
             proficiency in Bootstrap, Tailwind CSS, and Sass.
           </p>
         </div>
-        <div class="content-img">
+        <div class="content-img animation-zoom-out">
           <img src="assets/aboutImg.png" alt="" />
         </div>
-        <div class="content content-second">
+        <div class="content content-second animation-fade-in">
           <p>
             My <span>passion</span> for <span>scalable</span>,
             <span>real-world</span> solutions has led me deep into the realms
@@ -140,7 +147,7 @@
       </div>
     </div>
   </section>
-  <section class="resume-section">
+  <section class="resume-section" id="resume-section">
     <div class="resume">
       <div class="hero-pattern">
         <h1>Resume</h1>
@@ -159,17 +166,17 @@
         <div class="content-item">
           <h2>Work Experiences</h2>
           <div class="tiny-line"></div>
-          <div class="experience">
-            <div class="img-box">
+          <div class="experience ">
+            <div class="img-box animation-fade-in-same">
               <img src="assets/auradot_logo.png" alt="auradot_logo" />
             </div>
             <div class="details">
-              <h3>Software Engineer Intern</h3>
-              <p class="company">
+              <h3 class="animation-fade-in-same">Software Engineer Intern</h3>
+              <p class="company animation-fade-in-same">
                 <a href="http://auradot.com/">Auradot (Pvt) Ltd.</a>
               </p>
-              <p class="duration">Feb 2025 - August 2025</p>
-              <div class="description">
+              <p class="duration animation-fade-in-same">Feb 2025 - August 2025</p>
+              <div class="description animation-fade-in-same">
                 <p>
                   - Contributed to a large-scale microservices-based project
                   using Spring Boot (Java 17) and Angular as the frontend
@@ -193,7 +200,7 @@
                   members via Git branching and pull requests.
                 </p>
               </div>
-              <div class="technologies">
+              <div class="technologies animation-fade-in-same">
                 <div>
                   <span>Java</span>
                   <img src="assets/java.png" alt="java_logo" />
@@ -229,7 +236,7 @@
               </div>
             </div>
             <div class="location">
-              <div class="place">
+              <div class="place animation-fade-in-same">
                 <i class="fa-solid fa-location-dot fa-2x" style="color: #5e33b3; opacity: 0.7"></i>
                 <p>Colombo, Srilanka.</p>
               </div>
@@ -240,19 +247,19 @@
           <h2>Educations</h2>
           <div class="tiny-line"></div>
           <div class="experience">
-            <div class="img-box">
+            <div class="img-box animation-fade-in-same">
               <img src="assets/uok_logo.png" alt="auradot_logo" />
             </div>
             <div class="details">
-              <h3>BSc(Hons) Software Engineering</h3>
-              <p class="company">
+              <h3 class="animation-fade-in-same">BSc(Hons) Software Engineering</h3>
+              <p class="company animation-fade-in-same">
                 <a href="https://www.kln.ac.lk//">University of Kelaniya</a>
               </p>
-              <p class="duration">Aug 2021 - present</p>
-              <p class="gpa">
+              <p class="duration animation-fade-in-same">Aug 2021 - present</p>
+              <p class="gpa animation-fade-in-same">
                 <i class="fa-solid fa-circle-notch fa-xs"></i> GPA: 3.357/4.0
               </p>
-              <div class="description">
+              <div class="description animation-fade-in-same">
                 <p>- Specialization: Net-Centric Computing & Data Science.</p>
                 <p>
                   - Relevant Coursework: Data Structures, Algorithms, Web
@@ -261,7 +268,7 @@
                 </p>
               </div>
             </div>
-            <div class="location">
+            <div class="location animation-fade-in-same">
               <div class="place">
                 <i class="fa-solid fa-location-dot fa-2x" style="color: #5e33b3; opacity: 0.7"></i>
                 <p>Dalugama, Srilanka.</p>
@@ -269,19 +276,19 @@
             </div>
           </div>
           <div class="experience">
-            <div class="img-box">
+            <div class="img-box animation-fade-in-same">
               <img src="assets/school.png" alt="auradot_logo" />
             </div>
             <div class="details">
-              <h3>Physical Science</h3>
-              <p class="company">
+              <h3 class=" animation-fade-in-same">Physical Science</h3>
+              <p class="company animation-fade-in-same">
                 <a href="https://www.kln.ac.lk//">J/ Kokuvil Hindu Collage</a>
               </p>
-              <p class="duration">July 2017 - Aug 2019</p>
-              <p class="gpa">
+              <p class="duration animation-fade-in-same">July 2017 - Aug 2019</p>
+              <p class="gpa animation-fade-in-same">
                 <i class="fa-solid fa-circle-notch fa-xs"></i> Z-Score: 1.7359
               </p>
-              <div class="description">
+              <div class="description animation-fade-in-same">
                 <p>
                   - Combind Mathematics: A
                   <span style="font-weight: 900">|</span> Chemistry: A
@@ -289,7 +296,7 @@
                 </p>
               </div>
             </div>
-            <div class="location">
+            <div class="location animation-fade-in-same">
               <div class="place">
                 <i class="fa-solid fa-location-dot fa-2x" style="color: #5e33b3; opacity: 0.7"></i>
                 <p>Jaffna, Srilanka.</p>
@@ -303,7 +310,7 @@
 
     </div>
   </section>
-  <section class="skills-section">
+  <section class="skills-section" id="skills-section">
     <div class="skills">
       <h1>Skills</h1>
       <p>I possess a strong blend of technical and soft skills essential for modern software development. From core
@@ -313,95 +320,95 @@
         <div class="technologies">
           <!-- <h2>Technologies</h2> -->
           <div class="contents">
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>Java</span>
               <img src="assets/java.png" alt="java_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>JavaScript</span>
               <img src="assets/js.png" alt="js_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>TypeScript</span>
               <img src="assets/ts.png" alt="ts_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>Angular</span>
               <img src="assets/angular.png" alt="angular_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>React.js</span>
               <img src="assets/react.png" alt="react_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>Spring Boot</span>
               <img src="assets/spring-boot.png" alt="spring-boot_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>Node.js</span>
               <img src="assets/node.png" alt="node_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>MySQL</span>
               <img src="assets/mysql.png" alt="mysql_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>MongoDB</span>
               <img src="assets/MongoDB.png" alt="MongoDB_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>Hibernet</span>
               <img src="assets/jpa.png" alt="hibernet_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>Elasticsearch</span>
               <img src="assets/elasticsearch.png" alt="elasticsearch_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>Kafka</span>
               <img src="assets/kafka.png" alt="Kafka_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>keycloak</span>
               <img src="assets/keycloak.png" alt="keycloak_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>JWT</span>
               <img src="assets/jwt.png" alt="jwt_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>AWS</span>
               <img src="assets/aws.png" alt="AWS_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>Docker</span>
               <img src="assets/docker.png" alt="docker_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>Bitbucket</span>
               <img src="assets/bitbucket.png" alt="bitbucket_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>Git</span>
               <img src="assets/git.png" alt="git_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>Github</span>
               <img src="assets/github-icon.png" alt="github_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>Tailwind</span>
               <img src="assets/tailwind.png" alt="tailwind_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>Bootstrap</span>
               <img src="assets/bootstrap.png" alt="bootstrap_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>HTML</span>
               <img src="assets/html.png" alt=html_logo" />
             </div>
-            <div class="skill">
+            <div class="skill animation-zoom-in">
               <span>CSS</span>
               <img src="assets/css.png" alt="css_logo" />
             </div>
@@ -420,35 +427,35 @@
           </button>
           <div class="contents">
             <div class="cencept">
-              <div class="skill">
+              <div class="skill animation-fade-in-same">
                 <i class="fa-regular fa-square-full fa-sm"></i>
                 <span>Object-Oriented Programming (OOP)</span>
               </div>
-              <div class="skill">
+              <div class="skill animation-fade-in-same">
                 <i class="fa-regular fa-square-full fa-sm"></i>
                 <span>Data Structures and Algorithms</span>
               </div>
-              <div class="skill">
+              <div class="skill animation-fade-in-same">
                 <i class="fa-regular fa-square-full fa-sm"></i>
                 <span>Database Management Systems (DBMS)</span>
               </div>
-              <div class="skill">
+              <div class="skill animation-fade-in-same">
                 <i class="fa-regular fa-square-full fa-sm"></i>
                 <span>Software Development Life Cycle (SDLC)</span>
               </div>
-              <div class="skill">
+              <div class="skill animation-fade-in-same">
                 <i class="fa-regular fa-square-full fa-sm"></i>
                 <span>Microservices Architecture</span>
               </div>
-              <div class="skill">
+              <div class="skill animation-fade-in-same">
                 <i class="fa-regular fa-square-full fa-sm"></i>
                 <span>Agile & Scrum Methodologies</span>
               </div>
-              <div class="skill">
+              <div class="skill animation-fade-in-same">
                 <i class="fa-regular fa-square-full fa-sm"></i>
                 <span>Clean Code Principles</span>
               </div>
-              <div class="skill">
+              <div class="skill animation-fade-in-same">
                 <i class="fa-regular fa-square-full fa-sm"></i>
                 <span>Security Best Practices</span>
               </div>
@@ -468,47 +475,47 @@
             </span>
           </button>
           <div class="contents">
-            <div class="skill">
+            <div class="skill animation-fade-in-same">
               <i class="fa-regular fa-square-full fa-sm"></i>
               <span>Problem Solving</span>
             </div>
-            <div class="skill">
+            <div class="skill animation-fade-in-same">
               <i class="fa-regular fa-square-full fa-sm"></i>
               <span>Effective Communication</span>
             </div>
-            <div class="skill">
+            <div class="skill animation-fade-in-same">
               <i class="fa-regular fa-square-full fa-sm"></i>
               <span>Team Collaboration</span>
             </div>
-            <div class="skill">
+            <div class="skill animation-fade-in-same">
               <i class="fa-regular fa-square-full fa-sm"></i>
               <span>Adaptability Skills</span>
             </div>
-            <div class="skill">
+            <div class="skill animation-fade-in-same">
               <i class="fa-regular fa-square-full fa-sm"></i>
               <span>Time Management</span>
             </div>
-            <div class="skill">
+            <div class="skill animation-fade-in-same">
               <i class="fa-regular fa-square-full fa-sm"></i>
               <span>Creative Thinking</span>
             </div>
-            <div class="skill">
+            <div class="skill animation-fade-in-same">
               <i class="fa-regular fa-square-full fa-sm"></i>
               <span>Leadership Qualities</span>
             </div>
-            <div class="skill">
+            <div class="skill animation-fade-in-same">
               <i class="fa-regular fa-square-full fa-sm"></i>
               <span>Decision Making</span>
             </div>
-            <div class="skill">
+            <div class="skill animation-fade-in-same">
               <i class="fa-regular fa-square-full fa-sm"></i>
               <span>Continuous Learning</span>
             </div>
-            <div class="skill">
+            <div class="skill animation-fade-in-same">
               <i class="fa-regular fa-square-full fa-sm"></i>
               <span>Active Listening</span>
             </div>
-            <div class="skill">
+            <div class="skill animation-fade-in-same">
               <i class="fa-regular fa-square-full fa-sm"></i>
               <span>Conflict Resolution</span>
             </div>
@@ -516,13 +523,13 @@
         </div>
       </div>
   </section>
-  <section class="projects-section">
+  <section class="projects-section" id="projects-section">
     <div class="projects">
       <h1>Projects</h1>
       <p>I possess a strong blend of technical and soft skills essential for modern software development. From core
         programming principles to teamwork and problem-solving, I’m equipped to build effective and scalable solutions.
       </p>
-      <div id="projectsFilterBtnContainer">
+      <div id="projectsFilterBtnContainer" class="animation-fade-in">
         <button class="filterBtn active" onclick="projectsFilterSelection('all')">
           <img src="assets/icon-all.png" alt="icon-all" class="img">
           <img src="assets/hover-all.png" alt="icon-all" class="hover-img">
@@ -556,9 +563,9 @@
       </div>
       <div class="projects-content">
         <div class="content">
-          <div class="project springboot reactjs">
+          <div class="project animation-fade-in springboot reactjs">
             <div class="img">
-              <img src="./assets/projectImg.jpg" alt="">
+              <img src="./assets/image.png" alt="">
               <div class="overlay">
                 <a href="#" target="_blank">
                   <img src="./assets/github.gif" alt="github_icon">
@@ -608,9 +615,9 @@
               </div>
             </div>
           </div>
-          <div class="project nodejs reactjs">
+          <div class="project animation-fade-in nodejs reactjs">
             <div class="img">
-              <img src="./assets/projectImg.jpg" alt="">
+              <img src="./assets/image.png" alt="">
               <div class="overlay">
                 <a href="#" target="_blank">
                   <img src="./assets/github.gif" alt="github_icon">
@@ -660,9 +667,9 @@
               </div>
             </div>
           </div>
-          <div class="project springboot reactjs">
+          <div class="project animation-fade-in springboot reactjs">
             <div class="img">
-              <img src="./assets/projectImg.jpg" alt="">
+              <img src="./assets/image.png" alt="">
               <div class="overlay">
                 <a href="#" target="_blank">
                   <img src="./assets/github.gif" alt="github_icon">
@@ -712,9 +719,9 @@
               </div>
             </div>
           </div>
-          <div class="project nodejs">
+          <div class="project animation-fade-in nodejs">
             <div class="img">
-              <img src="./assets/projectImg.jpg" alt="">
+              <img src="./assets/image.png" alt="">
               <div class="overlay">
                 <a href="#" target="_blank">
                   <img src="./assets/github.gif" alt="github_icon">
@@ -764,9 +771,9 @@
               </div>
             </div>
           </div>
-          <div class="project springboot">
+          <div class="project animation-fade-in springboot">
             <div class="img">
-              <img src="./assets/projectImg.jpg" alt="">
+              <img src="./assets/image.png" alt="">
               <div class="overlay">
                 <a href="#" target="_blank">
                   <img src="./assets/github.gif" alt="github_icon">
@@ -816,9 +823,9 @@
               </div>
             </div>
           </div>
-          <div class="project nodejs reactjs">
+          <div class="project animation-fade-in nodejs reactjs">
             <div class="img">
-              <img src="./assets/projectImg.jpg" alt="">
+              <img src="./assets/image.png" alt="">
               <div class="overlay">
                 <a href="#" target="_blank">
                   <img src="./assets/github.gif" alt="github_icon">
@@ -868,9 +875,9 @@
               </div>
             </div>
           </div>
-          <div class="project springboot angularjs">
+          <div class="project animation-fade-in springboot angularjs">
             <div class="img">
-              <img src="./assets/projectImg.jpg" alt="">
+              <img src="./assets/image.png" alt="">
               <div class="overlay">
                 <a href="#" target="_blank">
                   <img src="./assets/github.gif" alt="github_icon">
@@ -920,9 +927,9 @@
               </div>
             </div>
           </div>
-          <div class="project nodejs angularjs">
+          <div class="project animation-fade-in nodejs angularjs">
             <div class="img">
-              <img src="./assets/projectImg.jpg" alt="">
+              <img src="./assets/image.png" alt="">
               <div class="overlay">
                 <a href="#" target="_blank">
                   <img src="./assets/github.gif" alt="github_icon">
@@ -972,9 +979,9 @@
               </div>
             </div>
           </div>
-          <div class="project springboot angularjs">
+          <div class="project animation-fade-in springboot angularjs">
             <div class="img">
-              <img src="./assets/projectImg.jpg" alt="">
+              <img src="./assets/image.png" alt="">
               <div class="overlay">
                 <a href="#" target="_blank">
                   <img src="./assets/github.gif" alt="github_icon">
@@ -1028,14 +1035,16 @@
       </div>
   </section>
 
-  <section class="articles-section">
+  <section class="articles-section" id="articles-section">
     <div class="articles">
       <h1>Articles</h1>
-      <p>Writing is my way of thinking out loud. On LinkedIn and Medium, I dive into the worlds of Java and JavaScript,
-        exploring not just the “how” but the “why” behind code. From advanced concepts to practical best practices, my
+      <p>Writing is my way of thinking out loud. On LinkedIn and Medium, I dive into the worlds of Java and
+        JavaScript,
+        exploring not just the “how” but the “why” behind code. From advanced concepts to practical best practices,
+        my
         articles are crafted to spark curiosity, simplify complexity, and share lessons that developers can apply in
         real projects.</p>
-      <div id="filterBtnContainer">
+      <div id="filterBtnContainer" class="animation-fade-in">
         <button class="filterBtn active" onclick="articlesFilterSelection('all')">
           <img src="assets/icon-all.png" alt="icon-all" class="img">
           <img src="assets/hover-all.png" alt="hover-all" class="hover-img">
@@ -1063,7 +1072,7 @@
         </button>
       </div>
       <div class="articles-content">
-        <div class="content medium java">
+        <div class="content animation-fade-in medium java">
           <div class="left">
             <div class="top">
               01
@@ -1097,7 +1106,7 @@
             </div>
           </div>
         </div>
-        <div class="content medium java">
+        <div class="content animation-fade-in medium java">
           <div class="left">
             <div class="top">
               02
@@ -1131,7 +1140,7 @@
             </div>
           </div>
         </div>
-        <div class="content medium js">
+        <div class="content animation-fade-in medium js">
           <div class="left">
             <div class="top">
               03
@@ -1165,7 +1174,7 @@
             </div>
           </div>
         </div>
-        <div class="content linkedin js">
+        <div class="content animation-fade-in linkedin js">
           <div class="left">
             <div class="top">
               04
@@ -1199,7 +1208,7 @@
             </div>
           </div>
         </div>
-        <div class="content linkedin js">
+        <div class="content animation-fade-in linkedin js">
           <div class="left">
             <div class="top">
               05
@@ -1233,7 +1242,7 @@
             </div>
           </div>
         </div>
-        <div class="content linkedin java">
+        <div class="content animation-fade-in linkedin java" style="margin-bottom: 40px;">
           <div class="left">
             <div class="top">
               06
@@ -1270,11 +1279,60 @@
       </div>
   </section>
 
+  <section class="contact-section" id="contact-section">
+    <div class="outbox animation-slide-left">
+      <div class="contact-bg-animation">
+        <div id="dots"></div>
+        <div id="dots1"></div>
+      </div>
+      <div class="left">
+        <h2>
+          Let’s Create <span>Something</span> Amazing Together
+        </h2>
+      </div>
+      <div class="right">
+        <p>
+          I’m open to full-time roles or freelance projects. A professional and reliable worker, available anytime to deliver quality results.
+        </p>
+        <div class="">
+          <button>
+            <img src="assets/send.png" alt="send-icon">
+            <span>Get in touch</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer">
+      <div class="left">
+        <span>© <span id="currentYear"></span> Thenujan Velthasan. All rights reserved.</span>
+      </div>
+      <div class="right">
+        <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in fa-xl"></i></a>
+        <a href="#" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a>
+        <a href="#" target="_blank"><i class="fa-brands fa-medium-m fa-xl"></i></a>
+        <a href="#" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a>
+      </div>
+    </div>
+  </footer>
 
 
 
 
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+  <script>
+    AOS.init({
+      easing: 'ease-in-out-quart',
+      once: true,
+      mirror: true,
+    });
+  </script>
   <script src="script.js"></script>
+  <script src="animation.js"></script>
 </body>
 
 </html>
